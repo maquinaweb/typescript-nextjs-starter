@@ -33,7 +33,8 @@
                 "**/ui/**",
                 "**/components/**",
                 "**/radix-ui/**",
-                "@radix-ui/**"
+                "@radix-ui/**",
+                "maquinaweb-ui/**"
               ],
 
               ":BLANK_LINE:",
