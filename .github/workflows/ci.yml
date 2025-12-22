@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Generate types
+        run: bun run next typegen
+
       - name: Check types
         run: bun run type-check
 
