@@ -2,7 +2,14 @@ import { Metadata } from 'next';
 
 import './globals.css';
 
-import { Inter } from 'next/font/google';
+import { Geist, Inter } from 'next/font/google';
+
+import { LazyMotion } from '@/components/ui/lazy-motion';
+
+import { cn } from '@/lib/utils';
+import ReactLenis from 'lenis/react';
+
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,8 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR" className={cn('font-sans', geist.variable)}>
+      <body className={inter.className}>
+        <ReactLenis root>
+          <LazyMotion>{children}</LazyMotion>
+        </ReactLenis>
+      </body>
     </html>
   );
 }

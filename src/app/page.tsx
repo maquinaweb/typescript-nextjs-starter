@@ -1,7 +1,9 @@
+import { SplitTextPoor } from 'maquinaweb-ui/split-text-poor';
+
 function Home() {
   return (
     <main>
-      <h1>Minimal template</h1>
+      <SplitTextPoor>Minimal template</SplitTextPoor>
     </main>
   );
 }
